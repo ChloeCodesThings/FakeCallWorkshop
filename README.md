@@ -22,6 +22,9 @@ Here's a diagram of what we'll be doing:
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--wGlGfh8K--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AepHpHigBLPGaCK5tuxzn4w.png)
 
+### Create an Azure Account!
+Create your own Azure account for free [here](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon)!
+
 ### Create an Azure Function Resource
 For the sake of easy to understand visuals/screenshots for this workshop, we'll be using the [Azure portal](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon) to create this. You can also use [VS Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=fakecallworkshop-github-chcondon), the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli/?WT.mc_id=fakecallworkshop-github-chcondon), etc. With Azure Functions you are given the the ability to code and test Functions locally on your machine without having to deploy to the cloud every single time you want to test (a huge time saver!).
 
@@ -48,7 +51,7 @@ It will take about a minute to deploy and then you’ll have a fresh new Azure F
 
 The default code is a simple hello world app. If you paste the function URL into your browser’s address bar. Add the query string value &name= to the end of this URL and press the Enter key on your keyboard to execute the request. You should see the response returned by the function displayed in the browser. **Try doing this once!**
 
-
-
+### Let’s Create a Fake Boyfriend
+##### (or aunt, or cousin, or coworker- whatever!)
 
 
