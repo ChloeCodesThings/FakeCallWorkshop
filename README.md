@@ -1,7 +1,7 @@
 # Chloe's Fake Call Workshop
-Materials to build your own fake boyfriend/boss/sibling/co-worker call with Azure &amp; Twilio
+A workshop to build your own fake boyfriend/boss/sibling/co-worker call with Azure &amp; Twilio
 
-Today we will build a fake calling app using
+Today we will build a fake calling app using:
 
 + ⚡ [Azure Functions](https://azure.microsoft.com/en-us/services/functions/?WT.mc_id=github-workshop-chcondon)
 + ☎️ [Twilio](https://www.twilio.com/)
@@ -18,5 +18,9 @@ Happy coding, friends!
 ## Let Us Begin!
 Today we will build a fake calling app using Azure Functions, Twilio, and a Flic button. We will start by creating a Function App in Azure. Then we will create a Twilio account, create 2 Azure Functions, and test it out on our phones.
 
+Here's a diagram of what we'll be doing:
 
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--wGlGfh8K--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AepHpHigBLPGaCK5tuxzn4w.png)
+
+###
 
