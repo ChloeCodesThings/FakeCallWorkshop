@@ -25,5 +25,15 @@ Here's a diagram of what we'll be doing:
 ### Create an Azure Function
 For the sake of easy to understand visuals/screenshots for this workshop, we'll be using the [Azure portal](https://azure.microsoft.com/en-us/free/?WT.mc_id=github-workshop-chcondon) to create this. You can also use [VS Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=github-workshop-chcondon), the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli/?WT.mc_id=github-workshop-chcondon), etc. With Azure Functions you are given the the ability to code and test Functions locally on your machine without having to deploy to the cloud every single time you want to test (a huge time saver!).
 
+To create an Azure function, you can just start from the Get Started menu and select Function App.
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--TnBmEJTg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1200/1%2A0yImy-SW4IsrRgJN_UjP7Q.png)
 
+Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=github-workshop-chcondon) (we will create a new one in this case), the Operating System you’d like to use, the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=github-workshop-chcondon) (I’m using consumption), the location I’d like to use (I’m in California, so West US 2 is usually my default), the runtime stack I’d like to use (I’m using JavaScript in this case), and I have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=github-workshop-chcondon) or use existing. I created a new one in this case.
 
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--aDEMnm-V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1200/1%2AVqJso6NwUPMUnLDj-Mx-WA.png)
+
+Once you have all these filled out, you can go ahead and deploy! Wait about a minute or two, then watch for the **Deployment succeeded** message.
+
+Woo! If you followed those steps, we have our resource! Select **Go to resource** to view your new Function App. 
+
+Now let's add a new function to our app.
