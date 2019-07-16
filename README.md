@@ -10,7 +10,7 @@ Today we will build a fake calling app using:
 
 Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
 
-You can learn more about the original project [in my blog post](https://dev.to/azure/an-ambivert-s-guide-to-azure-functions-27b8)! And [the GitHub Repo](https://github.com/ChloeCodesThings/sos-plz-save-me) is open, available, and interested in contributions!
+You can learn more about the original project [in my blog post](https://dev.to/azure/an-ambivert-s-guide-to-azure-functions-27b8)!
 
 Happy coding, friends!
 -Chloe 🎀 
@@ -36,7 +36,7 @@ To create an Azure Function, you can just start from the Get Started menu and se
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--TnBmEJTg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1200/1%2A0yImy-SW4IsrRgJN_UjP7Q.png)
 
-Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=fakecallworkshop-github-chcondon) (create a new one in this case), the Operating System you’d like to use, the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=fakecallworkshop-github-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US 2 is usually my default), the runtime stack I’d like to use (I’m using JavaScript in this case), and we have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=fakecallworkshop-github-chcondon) or use existing. We'll create a new one in this case.
+Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=fakecallworkshop-github-chcondon) (create a new one in this case), the Operating System you’d like to use, the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=fakecallworkshop-github-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US is usually my default), the runtime stack I’d like to use (I’m using NodeJS in this case), and we have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=fakecallworkshop-github-chcondon) or use existing. We'll create a new one in this case.
 
 ![](https://i.imgur.com/rEdUcjS.png)
 
@@ -55,7 +55,7 @@ And select Webhook + API
 
 It will take about a minute to deploy and then you’ll have a fresh new Azure Function waiting to be called.
 
-The default code is a simple hello world app. If you paste the function URL into your browser’s address bar. Add the query string value &name= to the end of this URL and press the Enter key on your keyboard to execute the request. You should see the response returned by the function displayed in the browser.
+The default code is a simple hello world app. If you paste the function URL (located above your function under the link **</> Get function URL**) into your browser’s address bar with the query string value &name= to the end of this URL and press the Enter key on your keyboard, you should be able to execute the request. You should see the response returned by the function displayed in the browser.
 
 **Try doing this once!** Add the URL with *&name=your-name-here* added to it, and test out that the function works in your browser.
 
@@ -101,7 +101,7 @@ module.exports = function (context) {
 
 This will be the code that is run when our function is called.
 
-**Take a moment to read and understand the code.** You'll see that we're setting our accountSid & authToken (with credentials we have set in our function's Application Settings). We then have a function that creates a message sent from SENDER_NUMBER, to RECIPIENT_NUMBER (with credentials we have set in our function's Application Settings as well). Next, we're logging that our message is sent, and setting our context as done. Alternatively , if there's an error, we'll log it and set our context to done.
+**Take a moment to read and understand the code.** 🕵️‍♀️ You'll see that we're setting our accountSid & authToken (with credentials we have set in our function's Application Settings). We then have a function that creates a message sent from SENDER_NUMBER, to RECIPIENT_NUMBER (with credentials we have set in our function's Application Settings as well). Next, we're logging that our message is sent, and setting our context as done. Alternatively , if there's an error, we'll log it and set our context to done.
 
 Once you have an understanding of this code, click **Save**.
 
@@ -111,7 +111,7 @@ Add a package.json file to your function. You can do this by navigating to the t
 
 ![](https://i.imgur.com/EWUt68c.png)
 
-Add the following code to your package.json file:
+Add the following code to your package.json file (adding your desired app name/description/etc):
 
 ```
 {
@@ -144,9 +144,9 @@ In the console, enter the following:
 npm install twilio
 ```
 
-This may take a couple minutes (if you're looking for a good time to go grab a coffee/LaCroix/bathroom break- this is it!). 
+This may take a couple minutes (if you're looking for a good time to go grab a coffee/LaCroix/bathroom break- this is it! ☕️🍕🚽). 
 
-You may see 2 warnings/notices here- you can ignore these.
+You may see a warnings/notice here- don't worry, you can ignore this. This is notifying us a package-lock.json file has been created.
 
 ### Add Credential Values Securely in Azure
 
@@ -156,7 +156,7 @@ Head over to **Configuration** under your Function App in the Azure portal (high
 
 Add 2 new application settings named **TWILIO_SID** and **TWILIO_TOKEN**- storing with them the credentials provided to us from Twilio.
 
-Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so: *+12222222222* as the value) as well as **RECIPIENT_NUMBER** (add your cell phone number as the value for now to test our app).
+Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so: *[+19168675309](https://www.youtube.com/watch?v=6WTdTwcmxyo)* as the value) as well as **RECIPIENT_NUMBER** (add your cell phone number as the value for now to test our app).
 
 ![](https://i.imgur.com/LNf0Sxy.png)
 
