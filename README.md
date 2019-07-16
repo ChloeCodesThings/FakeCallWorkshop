@@ -324,18 +324,48 @@ Feel free to play around with the **TWIML_URL** and add/remove your own MP3 Asse
 
 ### Add URL to Flic Button
 
-The next steps of this workshop require a Flic Button. [You can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10).
+The next steps of this workshop require a Flic Button. If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- reach out directly and I can help! 🙋‍♀️
 
-For our final step, we'll need to add our Azure Function URLs to the Flic Button app!
+For our final step, we'll need to add our Azure Function URLs to the Flic Button app! Download the Flic Button app to your phone on [Google Play](https://play.google.com/store/apps/details?id=io.flic.app&hl=en_US) or [Apple](https://apps.apple.com/us/app/flic-app/id977593793).
 
+Create an account, and login. Add a button to your phone by clicking the plus sign.
 
+![](https://i.imgur.com/sIFBORa.png)
 
-(additional directions/screenshots coming soon!)
+Click your Flic buttton to add it to your phone (**Note: in a workshop setting, this may be tricky with so many buttons! Make sure you get matched to the correct buttton**)
 
-- Download Flic app
-- Connect your button (we may need to space this pairing out in a group setting- will test!)
-- For Click command, navigate to Tools > Internet Request URL and add message function as a GET request.
-- For Double Click command, navigate to Tools > Internet Request URL and add call function as a GET request.
-- Test Click + Double Click on button to trigger text + call
+![](https://i.imgur.com/lQCvZIG.png)
+
+Name your Flic button a unique name, and click **Done**.
+
+![](https://i.imgur.com/4g2aYRr.png)
+
+Now we'll program our Flic button to send a text when clicked once. Select **Click >**.
+
+![](https://i.imgur.com/SZdABfJ.png)
+
+And navigate to **Tools**
+
+![](https://i.imgur.com/QXiu0h0.png)
+
+Select **Internet Request** (circled in pink below):
+
+![](https://i.imgur.com/5ecOOYT.png)
+
+Now, add the URL of our 1st function (the message/texting function) here. Select **GET** request. You do not need to provide Headers or change anything else here. **Save Action** to continue.
+
+Once saved, test that your function works with 1 click! You should recieve a text shortly.
+
+Do the same steps for the **Double Click >** option, navigate to Tools > Internet Request URL and add your call function URL as a GET request.
+
+Save again, and test that your function works with a double-click! You should recieve a call shortly (don't click the button too many times- be patient!).
 
 ### Add Contact to Phone
+
+Now for the cherry-on-top finishing touch!
+
+![](https://media.giphy.com/media/fMB1tYyIWercF01GmL/giphy.gif)
+
+Add a contact to your phone for your Twilio number, and name it whatever you'd like. For example, if you'd like to trigger a fake call from "your BFF" you could upload a picture of The Rock to your contacts, and label it "The Rock". [Here's an example of mine](https://www.youtube.com/watch?v=lCpO16JjoM8) (I used "💕My Boyfriend💕" as the contact with an image of my boo).
+
+
