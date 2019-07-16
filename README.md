@@ -1,6 +1,8 @@
 # Chloe's Fake Call Workshop
 *A workshop to build your own fake boyfriend/boss/sibling/co-worker call with Azure &amp; Twilio*
 
+![](https://camo.githubusercontent.com/306aca34bdd2e5664a12eb2f81bcafe047e8a5e7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6e6e6d394e4f6c56613879715762776172762f67697068792e676966)
+
 Today we will build a fake calling app using:
 
 + ⚡ [Azure Functions](https://azure.microsoft.com/en-us/services/functions/?WT.mc_id=github-workshop-chcondon)
