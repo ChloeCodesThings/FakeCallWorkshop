@@ -5,7 +5,7 @@ Today we will build a fake calling app using:
 
 + ⚡ [Azure Functions](https://azure.microsoft.com/en-us/services/functions/?WT.mc_id=github-workshop-chcondon)
 + ☎️ [Twilio](https://www.twilio.com/)
-+ 🔘A [Flic button](http://flic.io/shop/flic-1pack?aff=10)
++ 🔘A Flic button [(you can purchase one at a discounted rate here)](http://flic.io/shop/flic-1pack?aff=10)
 + 📱Your cellphone 
 
 Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
@@ -307,9 +307,25 @@ Click **Save**.
 
 Navigate to your call function and click **Run** to test the call.
 
+*This can sometimes take a minute or two, so be patient- and only click run once (otherwise, you may get multiple calls back to back)!*
+
+📝 NOTE: If you are still using a trail account, texts and calls from Twilio will have a *Sent from your Twilio trail account* message before it (with calls, you'll need to press any number to run your code). If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
+
+🎊 YOU DID IT!!! 🎊 You made your second Azure function using Twilio to send a call! Feel free to play and switch the **RECIPIENT_NUMBER** value as you wish. Again, I'll reiterate: if you're testing- it's easiest to keep your own number for now. Here's [a funny story about that](https://twitter.com/ChloeCondon/status/1105613535487225857). 🙈
+
 If all goes well, you'll soon get a call and will be a victim of Rick-Rolling! 😁☎️
 
+![](https://media.giphy.com/media/QG9DL5hAYZWVO/giphy.gif)
+
+Feel free to play around with the **TWIML_URL** and add/remove your own MP3 Assests within Twilio. Your call can be whatever you'd like it to be! Your mom, dad, cousin, aunt, uncle, sister, brother, co-worker, boss, Rupaul, Justin Trudeau, Barack Obama, or Beyonce-- your choice! Get creative and experiment with your fake call- **if we have time, we'll share it with the group.**
+
 ### Add URL to Flic Button
+
+The next steps of this workshop require a Flic Button. [You can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10).
+
+For our final step, we'll need to add our Azure Function URLs to the Flic Button app!
+
+
 
 (additional directions/screenshots coming soon!)
 
