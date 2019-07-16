@@ -74,32 +74,31 @@ Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial numb
 
 Click **Save**, and navigate back to **index.js** of your function.
 
-Remove the existing code, and add the following to your function (also available in a [Gist format here](https://gist.github.com/ChloeCodesThings/b11b1c41397ff0bc9a7f27d800db968a)):
+Remove the existing code in your **index.js** file, and add the following code in it's place (also available in a [Gist format here](https://gist.github.com/ChloeCodesThings/b11b1c41397ff0bc9a7f27d800db968a)):
 
 ```javascript
 const accountSid = process.env.TWILIO_SID;
 const authToken = process.env.TWILIO_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
-// This can also be accomplished with a Twilio output binding- you can read more on this at http://aka.ms/AA4n3j
+// This can also be accomplished with a Twilio output binding- you can read more on this at http://aka.ms/AA4n3j3
 
-    module.exports = async function (context){
-        const twilioOptions = {
-            url: process.env.TWIML_URL,
-            to: process.env.RECIPIENT_NUMBER,
-            from: process.env.SENDER_NUMBER
-        };
-    
-    await client.calls
+module.exports = async function (context) {
+  const twilioOptions = {
+    from: process.env.SENDER_NUMBER,
+    body: 'Hey- please call me ASAP. Locked out of apartment ',
+    to: process.env.RECIPIENT_NUMBER
+  };
+
+  await client.messages
         .create(twilioOptions)
-        .then(call => {             
-             context.log("Call sent");
+        .then(message => {             
+             context.log("Message sent");
              context.res = {
-               body: "Call successfully sent"
+               body: "Text successfully sent"
              };                                
         });
 }
 ```
 
-
-
+Click **Save**. 
