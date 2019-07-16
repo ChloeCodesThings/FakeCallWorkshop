@@ -265,7 +265,20 @@ Navigate to Runtime > TwiML Bins in the left-side navigation.
 
 [NOTES ON THIS/TWIML]
 
-Add the following code to
 
+Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-ASSET** with the url of the Twilio Asset you just created!):
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Response>
+  <Say voice="man">Hey- congrats! Everything is working. You are awesome. You did it- yay!</Say>
+  <Play>URL-OF-YOUR-TWILIO-ASSET</Play>
+</Response>
+```
+
+### Test call
+
+### Add URL to Flic Button
 
 ### Add contact
