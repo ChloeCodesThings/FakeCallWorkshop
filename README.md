@@ -10,7 +10,7 @@ Today we will build a fake calling app using:
 + 🔘A [Flic button](http://flic.io/shop/flic-1pack?aff=10)
 + 📱Your cellphone 
 
-If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- reach out directly and I can help! 🙋‍♀️
+If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- [reach out directly](https://twitter.com/ChloeCondon) and I can help! 🙋‍♀️
 
 
 Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
@@ -18,7 +18,7 @@ Before we begin, if you're looking for a quick summary and overview on Azure Fun
 You can learn more about the original project [in my blog post](https://dev.to/azure/an-ambivert-s-guide-to-azure-functions-27b8)!
 
 Happy coding, friends!
--Chloe 🎀 
+-[Chloe 🎀](https://twitter.com/ChloeCondon)
 
 ## Let Us Begin!
 Today we will build a fake calling app using Azure Functions, Twilio, and a Flic button. We will start by creating a Function App in Azure. Then we will create a Twilio account, create 2 Azure Functions, and test it out on our phones.
@@ -326,7 +326,7 @@ Feel free to play around with the **TWIML_URL** and add/remove your own MP3 Asse
 
 ### Add URL to Flic Button
 
-The next steps of this workshop require a Flic Button. If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- reach out directly and I can help! 🙋‍♀️
+The next steps of this workshop require a Flic Button. If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- [reach out directly](https://twitter.com/ChloeCondon) and I can help! 🙋‍♀️
 
 For our final step, we'll need to add our Azure Function URLs to the Flic Button app! Download the Flic Button app to your phone on [Google Play](https://play.google.com/store/apps/details?id=io.flic.app&hl=en_US) or [Apple](https://apps.apple.com/us/app/flic-app/id977593793).
 
