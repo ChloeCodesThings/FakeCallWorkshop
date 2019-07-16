@@ -55,7 +55,7 @@ It will take about a minute to deploy and then you’ll have a fresh new Azure F
 
 The default code is a simple hello world app. If you paste the function URL into your browser’s address bar. Add the query string value &name= to the end of this URL and press the Enter key on your keyboard to execute the request. You should see the response returned by the function displayed in the browser.
 
-**Try doing this once!** Add the URL with *&name="your-name-here"* added to it, and test out that the function works in your browser.
+**Try doing this once!** Add the URL with *&name=your-name-here* added to it, and test out that the function works in your browser.
 
 ### Let’s Create a Fake Boyfriend (or aunt, or cousin, or coworker- whatever!) with Twilio
 In a new tab, head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trail phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point).
@@ -64,7 +64,7 @@ Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** cr
 
 ### Add Sample Code to our Function
 
-Add the following code to your index.js file:
+Navigate back to the Azure portal, and replace the exsiting code wiith the following code in your index.js file:
 
 ```
 const accountSid = process.env.TWILIO_SID;
@@ -98,6 +98,7 @@ module.exports = function (context) {
 ```
 
 This will be the code that is run when our function is called.
+[ADDING NOTES HERE]
 
 Click **Save**
 
@@ -105,7 +106,7 @@ Click **Save**
 
 Add a package.json file to your function. You can do this by navigating to the top-right corner of your function, and adding a file as pictured below:
 
-![](https://i.imgur.com/vDvW7o4.png)
+![](https://i.imgur.com/EWUt68c.png)
 
 Add the following code to your package.json file:
 
@@ -126,16 +127,23 @@ Add the following code to your package.json file:
 }
 ```
 
+Click **Save**, and navigate back to your **index.js** file.
 
 ### Install the Twilio Node.js Module
 
-Install the Twilio Node helper library using npm. This will install the twilio module so that Node.js scripts in the current directory can use it. Navigate to the Azure console and enter the following:
+Install the Twilio Node helper library using npm. This will install the twilio module so that Node.js scripts in the current directory can use it. Access the Azure console at the bottom of the screen
+
+![](https://i.imgur.com/fY6npig.png)
+
+In the console, enter the following:
 
 ```
 npm install twilio
 ```
 
-You may see 2 warnings- you can ignore these.
+This may take a couple minutes (if you're looking for a good time to go grab a coffee/LaCroix/bathroom break- this is it!). 
+
+You may see 2 warnings/notices here- you can ignore these.
 
 ### Add Credential Values Securely in Azure
 
@@ -149,6 +157,8 @@ Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial numb
 
 ![](https://i.imgur.com/LNf0Sxy.png)
 
-Click **Save**, and navigate back to **index.js** of your function.
+😳 Totally lost? Can't find your credentials? Log into [Twilio](https://www.twilio.com/) to find them!
 
-Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying 
+Click **Save**, and navigate back to your function in the console.
+
+Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying "Woohoo- it worked!"
