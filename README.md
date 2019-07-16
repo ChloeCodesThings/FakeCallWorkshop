@@ -290,6 +290,8 @@ Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-A
 ```
 
 This TwiML will speak the <Say> text, and <Play> the URL of the Twilio Asset URL you provide it.
+ 
+![](https://i.imgur.com/r9zLG4Y.png) 
 
 Save your TwiML bin, and **copy the URL**.
 
