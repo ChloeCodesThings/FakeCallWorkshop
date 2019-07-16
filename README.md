@@ -42,10 +42,10 @@ Then you’ll need to fill in some basic info about your function here. Includin
 
 Once you have all these filled out, you can go ahead and deploy! Wait about a minute or two, then watch for the **Deployment succeeded** message.
 
-🎊 Woo! If you followed those steps, we have our resource! Select **Go to resource** to view your new Function App. 
+🎊 Woo! If you followed those steps, we have our resource! Select **Go to resource** in your notifications (top right corner) to view your new Function App. 
 
 ### Create Your Azure Functions
-Now we'll add our functions to our app. Select in-portal.
+Now we'll add our functions to our app.  Select in-portal.
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s---bwMvA0C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AR7td7o0irI7STDwRsCnDDg.png)
 
 And select Webhook + API
@@ -53,10 +53,22 @@ And select Webhook + API
 
 It will take about a minute to deploy and then you’ll have a fresh new Azure Function waiting to be called.
 
-The default code is a simple hello world app. If you paste the function URL into your browser’s address bar. Add the query string value &name= to the end of this URL and press the Enter key on your keyboard to execute the request. You should see the response returned by the function displayed in the browser. **Try doing this once!**
+The default code is a simple hello world app. If you paste the function URL into your browser’s address bar. Add the query string value &name= to the end of this URL and press the Enter key on your keyboard to execute the request. You should see the response returned by the function displayed in the browser.
+
+**Try doing this once!** Add the URL with *&name="your-name-here"* added to it, and test out that the function works in your browser.
 
 ### Let’s Create a Fake Boyfriend (or aunt, or cousin, or coworker- whatever!)
-Head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already.
+Head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trail phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point- not required).
+
+Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** created for your number. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will now securely store these in Azure.
+
+Head over to **Configuration** under your Function App in the Azure portal (highlighted in pink, below).
+
+![](https://i.imgur.com/IqStzw0.png)
+
+Add 2 new application settings named **TWILIO_SID** and **TWILIO_TOKEN**- storing with them the credentials provided to us from Twilio. Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so: *+12222222222* as the value) as well as **RECIPIENT_NUMBER** (add your cell phone number as the value for now to test our app).
+
+![](https://i.imgur.com/LNf0Sxy.png)
 
 
 
