@@ -45,7 +45,7 @@ Once you have all these filled out, you can go ahead and deploy! Wait about a mi
 🎊 Woo! If you followed those steps, we have our resource! Select **Go to resource** in your notifications (top right corner) to view your new Function App. 
 
 ### Create Your First Azure Function
-Now we'll add our functions to our app, starting with a function to send a text message.
+Now we'll add our functions to our app, starting with a function to send a text message. Click the plus sign in the right-hand side navigation, or select **Add Function**.
 
 Select in-portal.
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s---bwMvA0C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AR7td7o0irI7STDwRsCnDDg.png)
@@ -156,25 +156,33 @@ Head over to **Configuration** under your Function App in the Azure portal (high
 
 Add 2 new application settings named **TWILIO_SID** and **TWILIO_TOKEN**- storing with them the credentials provided to us from Twilio.
 
-Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so: *[+19168675309](https://www.youtube.com/watch?v=6WTdTwcmxyo)* as the value) as well as **RECIPIENT_NUMBER** (add your cell phone number as the value for now to test our app).
+Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so as the value: *[+19168675309](https://www.youtube.com/watch?v=6WTdTwcmxyo)*) as well as **RECIPIENT_NUMBER** (add your cell phone number in the same format of *[+19168675309](https://www.youtube.com/watch?v=6WTdTwcmxyo)* as the value for now to test our app).
 
 ![](https://i.imgur.com/LNf0Sxy.png)
 
-😳 Totally lost? Can't find your credentials? Log into [Twilio](https://www.twilio.com/) to find them!
+😳😭 Totally lost? Can't find your credentials? ☎️ Log into [Twilio](https://www.twilio.com/) to find them!
 
 Click **Save**, and navigate back to your function in the console.
 
-Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying "Woohoo- it worked!"
+### Test Your First Azure Function
+
+Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying "Woohoo- it worked!". You can also run and test this function by copying and pasting the function URL (located in the **</> Get function URL** link above your function) in your browser.
+
+📝 NOTE: If you are still using a trail account, texts and calls from Twilio will have a *Sent from your Twilio trail account* message before it. If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
+
+🎊 Great job! 🎊 You made your first Azure function using Twilio to send a text! Feel free to switch the **RECIPIENT_NUMBER** value if you'd prefer to have the app alert a friend (vs. send a message to yourself). Of course, if you're testing- it's easiest to keep your own number for now. Here's [a funny story about that](https://twitter.com/ChloeCondon/status/1105613535487225857). 🙈
 
 ### Create Your Second Azure Function
 
-Now we'll add our 2nd function to our app- this time, with the code to send a call.
+![](https://media.giphy.com/media/3orieJT6srEZntBhE4/giphy.gif)
 
-Add another function to your app (as we did before on our 1st function), and select **HTTPTrigger** again.
+Now we'll add our 2nd function to our app- this time, with the code to send a call (vs. a text).
+
+Add another function to your app (as we did before on our 1st function- click the plus sign in the right-hand side navigation), and select **HTTPTrigger** again.
 
 ### Add Sample Code to our Function
 
-In the Azure portal, replace the exsiting code wiith the following code in your index.js file:
+In the Azure portal, replace the exsiting code with the following code in your index.js file:
 
 ```
 const accountSid = process.env.TWILIO_SID;
@@ -207,7 +215,7 @@ const client = require('twilio')(accountSid, authToken);
 ```
 This will be the code that is run when our call function is called.
 
-**Take a moment to read and understand the code for your call function.** You'll see that we're again setting our accountSid & authToken (with credentials we have set in our function's Application Settings). We then have a function that creates a call sent from SENDER_NUMBER, to RECIPIENT_NUMBER, with a url of TWIML_URL (set-up with credentials we have set in our function's Application Settings as well). Next, we're logging that our call is sent, and setting our context as done. Alternatively , if there's an error, we'll log it and set our context to done.
+**Take a moment to read and understand the code for your call function.** You'll see that we're again setting our accountSid & authToken (with credentials we have set in our function's Application Settings). We then have a function that creates a call sent from **SENDER_NUMBER**, to **RECIPIENT_NUMBER**, with a url of **TWIML_URL** (this will be set-up with credentials we have set in our function's Application Settings as well). Next, we're logging that our call is sent, and setting our context as done. Alternatively , if there's an error, we'll log it and set our context to done.
 
 Click **Save**.
 
@@ -246,9 +254,9 @@ In the console, enter the following:
 npm install twilio
 ```
 
-Again, this may take a couple minutes (if you're looking for a good time to go grab *another* coffee/LaCroix/bathroom break- this is it!).
+Again, this may take a couple minutes (if you're looking for a good time to go grab *another* coffee/LaCroix/bathroom break- this is it! ☕️🍕🚽).
 
-You may see 2 warnings/notices here- you can ignore these.
+You may see a warnings/notice here- don't worry, you can ignore this. This is notifying us a package-lock.json file has been created.
 
 Our configurations are already set in Azure, so no need to add our **TWILIO_SID**, **TWILIO_TOKEN**, **SENDER_NUMBER**, or **RECIPIENT_NUMBER** again.
 
@@ -258,9 +266,11 @@ Now we'll create a Twilio Asset to hold our fake call's recorded voice message.
 
 Download the following MP3 by [clicking here](https://github.com/ChloeCodesThings/FakeCallWorkshop/raw/master/sampleaudio.mp3).
 
-Head back to Twilio, and navigate to Runtime > Assets in the left-side navigation.
+Head back to Twilio, and navigate to the **...*** section of the left-side navigation. Select Runtime > Assets.
 
-Add the Mp3 file and copy the path.
+![](https://i.imgur.com/9l3GwAU.png)
+
+Add or drag/drop the Mp3 file, and copy the path of the URL.
 
 ### Create a TwiML Bin
 
