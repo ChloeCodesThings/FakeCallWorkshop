@@ -279,9 +279,17 @@ Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-A
 
 Save your TwiML bin, and **copy the URL**.
 
-### Add TwiML URL to Application Setting
+### Add TwiML URL to Application Settings
+
+Navigate to **Application Settings** once again to add **TWIML_URL** with the value of your recently created/copied TwiML URL.
+
+Click **Save**.
 
 ### Test call
+
+Navigate to your call function and click **Run** to test the call.
+
+If all goes well, you'll soon get a call and will be a victim of Rick-Rolling! 😁☎️
 
 ### Add URL to Flic Button
 
