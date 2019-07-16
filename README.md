@@ -38,7 +38,7 @@ To create an Azure Function, you can just start from the Get Started menu and se
 
 Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=fakecallworkshop-github-chcondon) (create a new one in this case), the Operating System you’d like to use, the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=fakecallworkshop-github-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US 2 is usually my default), the runtime stack I’d like to use (I’m using JavaScript in this case), and we have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=fakecallworkshop-github-chcondon) or use existing. We'll create a new one in this case.
 
-![](https://res.cloudinary.com/practicaldev/image/fetch/s--aDEMnm-V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1200/1%2AVqJso6NwUPMUnLDj-Mx-WA.png)
+![](https://i.imgur.com/rEdUcjS.png)
 
 Once you have all these filled out, you can go ahead and deploy! Wait about a minute or two, then watch for the **Deployment succeeded** message.
 
