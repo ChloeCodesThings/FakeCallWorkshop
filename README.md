@@ -368,4 +368,6 @@ Now for the cherry-on-top finishing touch!
 
 Add a contact to your phone for your Twilio number, and name it whatever you'd like. For example, if you'd like to trigger a fake call from "your BFF" you could upload a picture of The Rock to your contacts, and label it "The Rock". [Here's an example of mine](https://www.youtube.com/watch?v=lCpO16JjoM8) (I used "💕My Boyfriend💕" as the contact with an image of my boo).
 
+![](https://camo.githubusercontent.com/306aca34bdd2e5664a12eb2f81bcafe047e8a5e7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6e6e6d394e4f6c56613879715762776172762f67697068792e676966)
+
 
