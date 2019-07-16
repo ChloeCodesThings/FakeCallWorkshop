@@ -277,6 +277,10 @@ Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-A
 </Response>
 ```
 
+Save your TwiML bin, and **copy the URL**.
+
+### Add TwiML URL to Application Setting
+
 ### Test call
 
 ### Add URL to Flic Button
