@@ -100,9 +100,10 @@ module.exports = function (context) {
 ```
 
 This will be the code that is run when our function is called.
-[ADDING NOTES HERE]
 
-Click **Save**
+**Take a moment to read and understand the code.** You'll see that we're setting our accountSid & authToken (with credentials we have set in our function's Application Settings). We then have a function that creates a message sent from SENDER_NUMBER, to RECIPIENT_NUMBER (with credentials we have set in our function's Application Settings as well). Next, we're logging that our message is sent, and setting our context as done. Alternatively , if there's an error, we'll log it and set our context to done.
+
+Once you have an understanding of this code, click **Save**.
 
 ### Add package.json file to Function
 
@@ -204,9 +205,11 @@ const client = require('twilio')(accountSid, authToken);
        });
    }
 ```
-This will be the code that is run when our call function is called. [ADDING NOTES HERE]
+This will be the code that is run when our call function is called.
 
-Click Save
+**Take a moment to read and understand the code for your call function.** You'll see that we're again setting our accountSid & authToken (with credentials we have set in our function's Application Settings). We then have a function that creates a call sent from SENDER_NUMBER, to RECIPIENT_NUMBER, with a url of TWIML_URL (set-up with credentials we have set in our function's Application Settings as well). Next, we're logging that our call is sent, and setting our context as done. Alternatively , if there's an error, we'll log it and set our context to done.
+
+Click **Save**.
 
 ### Add package.json file to Function
 
@@ -263,8 +266,7 @@ Add the Mp3 file and copy the path.
 
 Navigate to Runtime > TwiML Bins in the left-side navigation.
 
-[NOTES ON THIS/TWIML]
-
+We'll now create a TwiML Bin. TwiML Bins allow you to write TwiML that Twilio will host for you - so you can quickly prototype a solution without spinning up a web server.
 
 Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-ASSET** with the url of the Twilio Asset you just created!):
 
@@ -276,6 +278,8 @@ Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-A
   <Play>URL-OF-YOUR-TWILIO-ASSET</Play>
 </Response>
 ```
+
+This TwiML will speak the <Say> text, and <Play> the URL of the Twilio Asset URL you provide it.
 
 Save your TwiML bin, and **copy the URL**.
 
@@ -293,4 +297,6 @@ If all goes well, you'll soon get a call and will be a victim of Rick-Rolling! ð
 
 ### Add URL to Flic Button
 
-### Add contact
+
+
+### Add Contact to Phone
