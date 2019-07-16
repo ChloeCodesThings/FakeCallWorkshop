@@ -149,7 +149,7 @@ You may see 2 warnings/notices here- you can ignore these.
 
 Head over to **Configuration** under your Function App in the Azure portal (highlighted in pink, below).
 
-![](https://i.imgur.com/IqStzw0.png)
+![](https://i.imgur.com/WDjoqff.png)
 
 Add 2 new application settings named **TWILIO_SID** and **TWILIO_TOKEN**- storing with them the credentials provided to us from Twilio.
 
