@@ -62,7 +62,52 @@ In a new tab, head over to [Twilio.com](https://www.twilio.com/) and sign up for
 
 Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** created for your number. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will securely store these in Azure shortly.
 
+### Add Sample Code to our Function
+
+Add the following code to your index.js file:
+
+```
+const accountSid = process.env.TWILIO_SID;
+const authToken = process.env.TWILIO_TOKEN;
+const client = require('twilio')(accountSid, authToken);
+
+// This can also be accomplished with a Twilio output binding- you can read more on this at http://aka.ms/AA4n3j3
+
+module.exports = function (context) {
+ client.messages
+ .create({ from: process.env.SENDER_NUMBER,
+           body: 'Woohoo- it worked!',
+           to: process.env.RECIPIENT_NUMBER
+       })
+        .then(message => {             
+           context.log("Message sent");
+           context.res = {
+               // status: 200, /* Defaults to 200 */
+               body: 'Text successfully sent'
+           };                                
+           context.done();
+        }).catch(err => {
+          context.log.error("Twilio Error: " + err.message + " -- " + err.code);
+          context.res = {
+                   status: 500,
+                   body: `Twilio Error Message: ${err.message}\nTwilio Error code: ${err.code}`
+               };
+          context.done();
+        });
+}
+```
+
+This will be the code that is run when our function is called.
+
+Click **Save**
+
 ### Add package.json file to Function
+
+Add a package.json file to your function. You can do this by navigating to the top-right corner of your function, and adding a file as pictured below:
+
+![](https://i.imgur.com/vDvW7o4.png)
+
+Add the following code to your package.json file:
 
 ```
 {
@@ -81,17 +126,16 @@ Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** cr
 }
 ```
 
-SCREENSHOT
-
 
 ### Install the Twilio Node.js Module
 
-Install the Twilio Node helper library using npm:
-
+Install the Twilio Node helper library using npm. This will install the twilio module so that Node.js scripts in the current directory can use it. Navigate to the Azure console and enter the following:
 
 ```
 npm install twilio
 ```
+
+You may see 2 warnings- you can ignore these.
 
 ### Add Credential Values Securely in Azure
 
@@ -106,3 +150,5 @@ Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial numb
 ![](https://i.imgur.com/LNf0Sxy.png)
 
 Click **Save**, and navigate back to **index.js** of your function.
+
+Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying 
