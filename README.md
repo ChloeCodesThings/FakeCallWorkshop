@@ -372,7 +372,11 @@ Add a contact to your phone for your Twilio number, and name it whatever you'd l
 
 ![](https://camo.githubusercontent.com/306aca34bdd2e5664a12eb2f81bcafe047e8a5e7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6e6e6d394e4f6c56613879715762776172762f67697068792e676966)
 
-If you've made it this far- CONGRATS! You have successfully created 2 Azure Functions, connected them with Twilio, and are now able to trigger them from a Flic Button!
+If you've made it this far- CONGRATS! 🎊 You have successfully created 2 Azure Functions, connected them with Twilio, and are now able to trigger them from a Flic Button!
+
+Here's a diagram you can print and hang on your fridge to remember this moment forever and ever (also, so you can review what we've just accomplished 😉):
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--wGlGfh8K--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AepHpHigBLPGaCK5tuxzn4w.png)
 
 ![](https://media.giphy.com/media/qK6ccDxjSmmre/giphy.gif)
 
