@@ -8,7 +8,7 @@ Today we will build a fake calling app using:
 + 🔘A [Flic button](http://flic.io/shop/flic-1pack?aff=10)
 + 📱Your cellphone 
 
-Before we begin, if you're looking for a quick summary and overview on Azure Functions, I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
+Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
 
 You can learn more about the original project [in my blog post](https://dev.to/azure/an-ambivert-s-guide-to-azure-functions-27b8)! And [the GitHub Repo](https://github.com/ChloeCodesThings/sos-plz-save-me) is open, available, and interested in contributions!
 
@@ -23,7 +23,11 @@ Here's a diagram of what we'll be doing:
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--wGlGfh8K--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AepHpHigBLPGaCK5tuxzn4w.png)
 
 ### Create an Azure Account!
-Create your own Azure account for free [here](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon)!
+If you don't already have one, create an Azure account for free [here](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon)!
+
+I know what you may be thinking... "but Chloe- I'm a developer... this is much too bright for me!". Don't worry- there's a dark mode option. 😎
+
+![](https://i.imgur.com/LrZ3qw3.png)
 
 ### Create an Azure Function Resource
 For the sake of easy to understand visuals/screenshots for this workshop, we'll be using the [Azure portal](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon) to create this. You can also use [VS Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=fakecallworkshop-github-chcondon), the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli/?WT.mc_id=fakecallworkshop-github-chcondon), etc. With Azure Functions you are given the the ability to code and test Functions locally on your machine without having to deploy to the cloud every single time you want to test (a huge time saver!).
