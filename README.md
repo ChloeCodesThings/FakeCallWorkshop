@@ -278,7 +278,7 @@ Navigate to Runtime > TwiML Bins in the left-side navigation.
 
 We'll now create a TwiML Bin. TwiML Bins allow you to write TwiML that Twilio will host for you - so you can quickly prototype a solution without spinning up a web server.
 
-Add the following to your TwiML bin (make sure to replace **URL-OF-YOUR-TWILIO-ASSET** with the url of the Twilio Asset you just created!):
+Add the following to your TwiML bin- **make sure to replace **URL-OF-YOUR-TWILIO-ASSET** with the url of the Twilio Asset you just created!** This will play our MP3 when a call is made to the **RECIPIENT_NUMBER**:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -298,6 +298,8 @@ Save your TwiML bin, and **copy the URL**.
 ### Add TwiML URL to Application Settings
 
 Navigate to **Application Settings** once again to add **TWIML_URL** with the value of your recently created/copied TwiML URL.
+
+![](https://i.imgur.com/OBkv4mI.png)
 
 Click **Save**.
 
