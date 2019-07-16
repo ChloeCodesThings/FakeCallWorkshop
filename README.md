@@ -44,8 +44,10 @@ Once you have all these filled out, you can go ahead and deploy! Wait about a mi
 
 🎊 Woo! If you followed those steps, we have our resource! Select **Go to resource** in your notifications (top right corner) to view your new Function App. 
 
-### Create Your Azure Functions
-Now we'll add our functions to our app.  Select in-portal.
+### Create Your First Azure Function
+Now we'll add our functions to our app, starting with a function to send a text message.
+
+Select in-portal.
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s---bwMvA0C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AR7td7o0irI7STDwRsCnDDg.png)
 
 And select Webhook + API
@@ -162,3 +164,89 @@ Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial numb
 Click **Save**, and navigate back to your function in the console.
 
 Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying "Woohoo- it worked!"
+
+### Create Your Second Azure Function
+
+Now we'll add our 2nd function to our app- this time, with the code to send a call.
+
+Add another function to your app (as we did before on our 1st function), and select **HTTPTrigger** again.
+
+### Add Sample Code to our Function
+
+In the Azure portal, replace the exsiting code wiith the following code in your index.js file:
+
+```
+const accountSid = process.env.TWILIO_SID;
+const authToken = process.env.TWILIO_TOKEN;
+const client = require('twilio')(accountSid, authToken);
+
+    module.exports = function (context) {
+       client.calls
+       .create({
+                 url: process.env.TWIML_URL,
+                 to: process.env.RECIPIENT_NUMBER,
+                 from: process.env.SENDER_NUMBER,
+           })
+      .then(call => {
+           context.log("Call sent");
+           context.res = {
+               // status: 200, /* Defaults to 200 */
+               body: 'Call successfully sent'
+           };
+           context.done();
+       }).catch(err => {
+           context.log.error("Twilio Error: " + err.message + " -- " + err.code);
+           context.res = {
+               status: 500,
+               body: `Twilio Error Message: ${err.message}\nTwilio Error code: ${err.code}`
+           };
+           context.done();
+       });
+   }
+```
+This will be the code that is run when our call function is called. [ADDING NOTES HERE]
+
+Click Save
+
+### Add package.json file to Function
+
+Add a package.json file to your function (as we did before on our 1st function). 
+
+Add the following code to your package.json file:
+
+```
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "description": "Fake text/call functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "your-name",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "^3.33.1"
+  }
+}
+```
+
+Click Save, and navigate back to your index.js file.
+
+### Install the Twilio Node.js Module
+
+Once again, we'll install the Twilio Node helper library using npm. This will install the twilio module so that Node.js scripts in the current directory can use it. Access the Azure console at the bottom of the screen.
+
+In the console, enter the following:
+
+```
+npm install twilio
+```
+
+Again, this may take a couple minutes (if you're looking for a good time to go grab *another* coffee/LaCroix/bathroom break- this is it!).
+
+You may see 2 warnings/notices here- you can ignore these.
+
+Our configurations are already set in Azure- so we're almost good to go!
+
+### Add contact
