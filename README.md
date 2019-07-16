@@ -5,8 +5,11 @@ Today we will build a fake calling app using:
 
 + ⚡ [Azure Functions](https://azure.microsoft.com/en-us/services/functions/?WT.mc_id=github-workshop-chcondon)
 + ☎️ [Twilio](https://www.twilio.com/)
-+ 🔘A Flic button [(you can purchase one at a discounted rate here)](http://flic.io/shop/flic-1pack?aff=10)
++ 🔘A [Flic button](http://flic.io/shop/flic-1pack?aff=10)
 + 📱Your cellphone 
+
+If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- reach out directly and I can help! 🙋‍♀️
+
 
 Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
 
