@@ -247,6 +247,25 @@ Again, this may take a couple minutes (if you're looking for a good time to go g
 
 You may see 2 warnings/notices here- you can ignore these.
 
-Our configurations are already set in Azure- so we're almost good to go!
+Our configurations are already set in Azure, so no need to add our **TWILIO_SID**, **TWILIO_TOKEN**, **SENDER_NUMBER**, or **RECIPIENT_NUMBER** again.
+
+### Create Twilio Asset
+
+Now we'll create a Twilio Asset to hold our fake call's recorded voice message.
+
+Download the following MP3 by [clicking here](https://github.com/ChloeCodesThings/FakeCallWorkshop/raw/master/sampleaudio.mp3).
+
+Head back to Twilio, and navigate to Runtime > Assets in the left-side navigation.
+
+Add the Mp3 file and copy the path.
+
+### Create a TwiML Bin
+
+Navigate to Runtime > TwiML Bins in the left-side navigation.
+
+[NOTES ON THIS/TWIML]
+
+Add the following code to
+
 
 ### Add contact
