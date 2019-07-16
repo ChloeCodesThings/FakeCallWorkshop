@@ -57,10 +57,43 @@ The default code is a simple hello world app. If you paste the function URL into
 
 **Try doing this once!** Add the URL with *&name="your-name-here"* added to it, and test out that the function works in your browser.
 
-### Let’s Create a Fake Boyfriend (or aunt, or cousin, or coworker- whatever!)
-Head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trail phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point- not required).
+### Let’s Create a Fake Boyfriend (or aunt, or cousin, or coworker- whatever!) with Twilio
+In a new tab, head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trail phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point).
 
-Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** created for your number. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will now securely store these in Azure.
+Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** created for your number. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will securely store these in Azure shortly.
+
+### Add package.json file to Function
+
+```
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "description": "Fake text/call functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "your-name",
+  "license": "MIT",
+  "dependencies": {
+    "twilio": "^3.33.1"
+  }
+}
+```
+
+SCREENSHOT
+
+
+### Install the Twilio Node.js Module
+
+Install the Twilio Node helper library using npm:
+
+
+```
+npm install twilio
+```
+
+### Add Credential Values Securely in Azure
 
 Head over to **Configuration** under your Function App in the Azure portal (highlighted in pink, below).
 
@@ -73,32 +106,3 @@ Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial numb
 ![](https://i.imgur.com/LNf0Sxy.png)
 
 Click **Save**, and navigate back to **index.js** of your function.
-
-Remove the existing code in your **index.js** file, and add the following code in it's place (also available in a [Gist format here](https://gist.github.com/ChloeCodesThings/4c41eb0fc8399d226edd67629e1ce853)):
-
-```javascript
-const accountSid = process.env.TWILIO_SID;
-const authToken = process.env.TWILIO_TOKEN;
-const client = require('twilio')(accountSid, authToken);
-
-// This can also be accomplished with a Twilio output binding- you can read more on this at http://aka.ms/AA4n3j3
-
-module.exports = async function (context) {
-  const twilioOptions = {
-    from: process.env.SENDER_NUMBER,
-    body: 'Hey- please call me ASAP. Locked out of apartment ',
-    to: process.env.RECIPIENT_NUMBER
-  };
-
-  await client.messages
-        .create(twilioOptions)
-        .then(message => {             
-             context.log("Message sent");
-             context.res = {
-               body: "Text successfully sent"
-             };                                
-        });
-}
-```
-
-Click **Save**. 
