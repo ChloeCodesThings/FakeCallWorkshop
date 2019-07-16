@@ -66,9 +66,17 @@ Head over to **Configuration** under your Function App in the Azure portal (high
 
 ![](https://i.imgur.com/IqStzw0.png)
 
-Add 2 new application settings named **TWILIO_SID** and **TWILIO_TOKEN**- storing with them the credentials provided to us from Twilio. Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so: *+12222222222* as the value) as well as **RECIPIENT_NUMBER** (add your cell phone number as the value for now to test our app).
+Add 2 new application settings named **TWILIO_SID** and **TWILIO_TOKEN**- storing with them the credentials provided to us from Twilio.
+
+Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial number in the format of plus-sign, country code, and number like so: *+12222222222* as the value) as well as **RECIPIENT_NUMBER** (add your cell phone number as the value for now to test our app).
 
 ![](https://i.imgur.com/LNf0Sxy.png)
+
+Click **Save**, and navigate back to **index.js** of your function.
+
+Remove the existing code, and add the following to your function:
+
+<script src="https://gist.github.com/ChloeCodesThings/b11b1c41397ff0bc9a7f27d800db968a"></script>
 
 
 
