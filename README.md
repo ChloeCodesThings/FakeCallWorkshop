@@ -300,6 +300,7 @@ If all goes well, you'll soon get a call and will be a victim of Rick-Rolling! ð
 (additional directions/screenshots coming soon!)
 
 - Download Flic app
+- Connect your button (we may need to space this pairing out in a group setting- will test!)
 - For Click command, navigate to Tools > Internet Request URL and add message function as a GET request.
 - For Double Click command, navigate to Tools > Internet Request URL and add call function as a GET request.
 - Test Click + Double Click on button to trigger text + call
