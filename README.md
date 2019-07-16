@@ -74,7 +74,7 @@ Additionally, add a setting for **SENDER_NUMBER** (adding your Twilio trial numb
 
 Click **Save**, and navigate back to **index.js** of your function.
 
-Remove the existing code in your **index.js** file, and add the following code in it's place (also available in a [Gist format here](https://gist.github.com/ChloeCodesThings/b11b1c41397ff0bc9a7f27d800db968a)):
+Remove the existing code in your **index.js** file, and add the following code in it's place (also available in a [Gist format here](https://gist.github.com/ChloeCodesThings/4c41eb0fc8399d226edd67629e1ce853)):
 
 ```javascript
 const accountSid = process.env.TWILIO_SID;
