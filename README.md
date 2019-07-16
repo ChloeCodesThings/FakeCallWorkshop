@@ -362,12 +362,34 @@ Save again, and test that your function works with a double-click! You should re
 
 ### Add Contact to Phone
 
-Now for the cherry-on-top finishing touch!
+Now for the cherry-on-top finishing touch! 🍒🍦
 
 ![](https://media.giphy.com/media/fMB1tYyIWercF01GmL/giphy.gif)
 
-Add a contact to your phone for your Twilio number, and name it whatever you'd like. For example, if you'd like to trigger a fake call from "your BFF" you could upload a picture of The Rock to your contacts, and label it "The Rock". [Here's an example of mine](https://www.youtube.com/watch?v=lCpO16JjoM8) (I used "💕My Boyfriend💕" as the contact with an image of my boo).
+Add a contact to your phone for your Twilio number, and name it whatever you'd like. For example, if you'd like to trigger a fake call from "your BFF" you could upload a picture of The Rock to your contacts, and label it "The Rock". [Here's an example of mine](https://www.youtube.com/watch?v=lCpO16JjoM8) (I used "💕My Boyfriend💕" as the contact with an image of my boo):
 
 ![](https://camo.githubusercontent.com/306aca34bdd2e5664a12eb2f81bcafe047e8a5e7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6e6e6d394e4f6c56613879715762776172762f67697068792e676966)
 
+If you've made it this far- CONGRATS! You have successfully created 2 Azure Functions, connected them with Twilio, and are now able to trigger them from a Flic Button!
 
+![](https://media.giphy.com/media/qK6ccDxjSmmre/giphy.gif)
+
+If you're interested in learning more about Azure Functions and want to continue learning, here are some great resources to get started:
+
++ [Create your first function using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=github-workshop-chcondon)
+
++ [Create a function in Azure that is triggered by a timer](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-scheduled-function/?WT.mc_id=github-workshop-chcondon)
+
++ [Create a function triggered by Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-cosmos-db-triggered-function/?WT.mc_id=github-workshop-chcondon)
+
++ [Create a function triggered by Azure Blob storage](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function/?WT.mc_id=github-workshop-chcondon)
+
++ [Create a function triggered by Azure Queue storage](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-queue-triggered-function/?WT.mc_id=github-workshop-chcondon)
+
++ [Azure Functions developer reference](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference/?WT.mc_id=github-workshop-chcondon) (provides more technical information about the Azure Functions runtime and a reference for coding functions and defining triggers and bindings)
+
++ [Testing Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-test-a-function/?WT.mc_id=github-workshop-chcondon)
+
++ [Azure Functions scale and hosting](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=github-workshop-chcondon)
+
++ [Learn more about Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/overview/?WT.mc_id=github-workshop-chcondon)
