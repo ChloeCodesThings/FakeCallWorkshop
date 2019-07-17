@@ -34,6 +34,8 @@ I know what you may be thinking... "but Chloe- I'm a developer... this is much t
 
 ![](https://i.imgur.com/i2qeQFm.png)
 
+If you already have an Azure account, yay! 
+
 ### Create an Azure Function Resource
 For the sake of easy to understand visuals/screenshots for this workshop, we'll be using the [Azure portal](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon) to create this. You can also use [VS Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=fakecallworkshop-github-chcondon), the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli/?WT.mc_id=fakecallworkshop-github-chcondon), etc. With Azure Functions you are given the the ability to code and test Functions locally on your machine without having to deploy to the cloud every single time you want to test (a huge time saver!).
 
@@ -67,7 +69,7 @@ The default code is a simple hello world app. If you paste the function URL (loc
 ### Let’s Create a Fake Boyfriend (or aunt, or cousin, or coworker- whatever!) with Twilio
 In a new tab, head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trail phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point).
 
-Once you have a trail number, you'll see a **ACCOUNT SID** and **AUTH TOKEN** created for your number. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will securely store these in Azure shortly.
+Once you have a trail number, head back to the dashbaord. You'll see a **ACCOUNT SID** and **AUTH TOKEN** for your project. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will securely store these in Azure shortly.
 
 ### Add Sample Code to our Function
 
