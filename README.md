@@ -67,9 +67,9 @@ The default code is a simple hello world app. If you paste the function URL (loc
 **Try doing this once!** Add the URL with *&name=your-name-here* added to it, and test out that the function works in your browser.
 
 ### Let’s Create a Fake Boyfriend (or aunt, or cousin, or coworker- whatever!) with Twilio
-In a new tab, head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trail phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point).
+In a new tab, head over to [Twilio.com](https://www.twilio.com/) and sign up for an account if you don't have one already. Add a trial phone number to your account that has calling and SMS capabilitites (if you'd like to not work in trial mode- you can use code **CHLOE20** to upgrade your account at any point).
 
-Once you have a trail number, head back to the dashbaord. You'll see a **ACCOUNT SID** and **AUTH TOKEN** for your project. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will securely store these in Azure shortly.
+Once you have a trial number, head back to the dashbaord. You'll see a **ACCOUNT SID** and **AUTH TOKEN** for your project. 🚨 Do not share/screenshot/commit these numbers 🚨 Think of them as your username and password for our Twilio number- we will securely store these in Azure shortly.
 
 ### Add Sample Code to our Function
 
@@ -175,7 +175,7 @@ Click **Save**, and navigate back to your function in the console.
 
 Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying "Woohoo- it worked!". You can also run and test this function by copying and pasting the function URL (located in the **</> Get function URL** link above your function) in your browser.
 
-📝 NOTE: If you are still using a trail account, texts and calls from Twilio will have a *Sent from your Twilio trail account* message before it. If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
+📝 NOTE: If you are still using a trial account, texts and calls from Twilio will have a *Sent from your Twilio trial account* message before it. If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
 
 🎊 Great job! 🎊 You made your first Azure function using Twilio to send a text! Feel free to switch the **RECIPIENT_NUMBER** value if you'd prefer to have the app alert a friend (vs. send a message to yourself). Of course, if you're testing- it's easiest to keep your own number for now. Here's [a funny story about that](https://twitter.com/ChloeCondon/status/1105613535487225857). 🙈
 
@@ -316,7 +316,7 @@ Navigate to your call function and click **Run** to test the call.
 
 *This can sometimes take a minute or two, so be patient- and only click run once (otherwise, you may get multiple calls back to back)!*
 
-📝 NOTE: If you are still using a trail account, texts and calls from Twilio will have a *Sent from your Twilio trail account* message before it (with calls, you'll need to press any number to run your code). If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
+📝 NOTE: If you are still using a trial account, texts and calls from Twilio will have a *Sent from your Twilio trial account* message before it (with calls, you'll need to press any number to run your code). If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
 
 🎊 YOU DID IT!!! 🎊 You made your second Azure function using Twilio to send a call! Feel free to play and switch the **RECIPIENT_NUMBER** value as you wish. Again, I'll reiterate: if you're testing- it's easiest to keep your own number for now. Here's [a funny story about that](https://twitter.com/ChloeCondon/status/1105613535487225857). 🙈
 
