@@ -12,6 +12,10 @@ Today we will build a fake calling app using:
 
 If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- [reach out directly](https://twitter.com/ChloeCondon) and I can help! 🙋‍♀️
 
+**YOU DO NOT NEED A FLIC BUTTON TO COMPLETE THIS WORKSHOP**
+(However, it's [a lot more fun](https://www.youtube.com/watch?v=kAjrKYstfDM) with one! 🙃)
+
+
 
 Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
 
@@ -43,7 +47,7 @@ To create an Azure Function, you can just start from the Get Started menu and se
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--TnBmEJTg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1200/1%2A0yImy-SW4IsrRgJN_UjP7Q.png)
 
-Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=fakecallworkshop-github-chcondon) (create a new one in this case), the Operating System you’d like to use, the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=fakecallworkshop-github-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US is usually my default), the runtime stack I’d like to use (I’m using NodeJS in this case), and we have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=fakecallworkshop-github-chcondon) or use existing. We'll create a new one in this case.
+Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=fakecallworkshop-github-chcondon) (create a new one in this case), the Operating System you’d like to use (please select **Windows** for this workshop), the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=fakecallworkshop-github-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US is usually my default), the runtime stack I’d like to use (I’m using NodeJS in this case), and we have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=fakecallworkshop-github-chcondon) or use existing. We'll create a new one in this case.
 
 ![](https://i.imgur.com/rEdUcjS.png)
 
@@ -52,7 +56,7 @@ Once you have all these filled out, you can go ahead and deploy! Wait about a mi
 🎊 Woo! If you followed those steps, we have our resource! Select **Go to resource** in your notifications (top right corner) to view your new Function App. 
 
 ### Create Your First Azure Function
-Now we'll add our functions to our app, starting with a function to send a text message. Click the plus sign in the right-hand side navigation, or select **Add Function**.
+Now we'll add our functions to our app, starting with a function to send a text message. Click the plus sign in the right-hand side navigation, or select **Add Function** towards the center/bottton of the screen.
 
 Select in-portal.
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s---bwMvA0C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AR7td7o0irI7STDwRsCnDDg.png)
@@ -173,7 +177,7 @@ Click **Save**, and navigate back to your function in the console.
 
 ### Test Your First Azure Function
 
-Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. If all goes smoothly, you should receive a text saying "Woohoo- it worked!". You can also run and test this function by copying and pasting the function URL (located in the **</> Get function URL** link above your function) in your browser.
+Click the **Run** button at the top of your function. Your logs should pop up and show that your function has been called. **This may take a couple minutes on your 1st try, so stay patient!** If all goes smoothly, you should receive a text saying "Woohoo- it worked!". You can also run and test this function by copying and pasting the function URL (located in the **</> Get function URL** link above your function) in your browser.
 
 📝 NOTE: If you are still using a trial account, texts and calls from Twilio will have a *Sent from your Twilio trial account* message before it. If you'd like to remove this, consider upgrading and adding code **CHLOE20** for some credits.
 
@@ -304,7 +308,7 @@ Save your TwiML bin, and **copy the URL**.
 
 ### Add TwiML URL to Application Settings
 
-Navigate to **Application Settings** once again to add **TWIML_URL** with the value of your recently created/copied TwiML URL.
+Navigate to **Configuration** once again to add **TWIML_URL** with the value of your recently created/copied TwiML URL to your **Application Settings**.
 
 ![](https://i.imgur.com/OBkv4mI.png)
 
