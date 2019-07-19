@@ -12,12 +12,12 @@ Today we will build a fake calling app using:
 
 If you don't own a Flic Button, [you can purchase one at a discounted rate here](http://flic.io/shop/flic-1pack?aff=10). If you're looking for a group purchase for a workshop, or are interested in custom logo buttons- [reach out directly](https://twitter.com/ChloeCondon) and I can help! 🙋‍♀️
 
-**YOU DO NOT NEED A FLIC BUTTON TO COMPLETE THIS WORKSHOP**
+⚠️ **YOU DO NOT NEED A FLIC BUTTON TO COMPLETE THIS WORKSHOP** ⚠️
 (However, it's [a lot more fun](https://www.youtube.com/watch?v=kAjrKYstfDM) with one! 🙃)
 
 
 
-Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I reccomend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
+Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I recommend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
 
 You can learn more about the original project [in my blog post](https://dev.to/azure/an-ambivert-s-guide-to-azure-functions-27b8)!
 
@@ -118,7 +118,7 @@ Once you have an understanding of this code, click **Save**.
 
 ### Add package.json file to Function
 
-Add a package.json file to your function. You can do this by navigating to the top-right corner of your function, and adding a file as pictured below:
+Add a package.json file to your function. You can do this by navigating to the top-right corner of your function, and adding a file as pictured below (⚠️ Can't find it? The 'View Files' tab is collapsed- scroll *alllllll* the way to the right of your screen):
 
 ![](https://i.imgur.com/EWUt68c.png)
 
@@ -161,7 +161,7 @@ You may see a warnings/notice here- don't worry, you can ignore this. This is no
 
 ### Add Credential Values Securely in Azure
 
-Head over to **Configuration** under your Function App in the Azure portal (highlighted in pink, below).
+Head over to **Configuration** under your Function App in the Azure portal (highlighted in pink, below- click on your Function App Name on the left-hand side).
 
 ![](https://i.imgur.com/WDjoqff.png)
 
