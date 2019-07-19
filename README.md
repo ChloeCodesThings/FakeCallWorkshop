@@ -275,7 +275,7 @@ Our configurations are already set in Azure, so no need to add our **TWILIO_SID*
 
 Now we'll create a Twilio Asset to hold our fake call's recorded voice message.
 
-Download the following MP3 by [clicking here](https://github.com/ChloeCodesThings/FakeCallWorkshop/raw/master/sampleaudio.mp3).
+Download the following MP3 by [clicking here](https://github.com/ChloeCodesThings/FakeCallWorkshop/raw/master/sampleaudio.mp3). Alternatively, you can record [your own MP3 here](https://online-voice-recorder.com/) (or, use whatever MP3 you'd like!)
 
 Head back to Twilio, and navigate to the **...*** section of the left-side navigation. Select Runtime > Assets.
 
