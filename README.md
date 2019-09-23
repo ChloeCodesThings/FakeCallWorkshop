@@ -56,7 +56,7 @@ Once you have all these filled out, you can go ahead and deploy! Wait about a mi
 🎊 Woo! If you followed those steps, we have our resource! Select **Go to resource** in your notifications (top right corner) to view your new Function App. 
 
 ### Create Your First Azure Function
-Now we'll add our functions to our app, starting with a function to send a text message. Click the plus sign in the right-hand side navigation, or select **Add Function** towards the center/bottton of the screen.
+Now we'll add our functions to our app, starting with a function to send a text message. Click the plus sign in the left-hand side navigation, or select **Add Function** towards the center/bottton of the screen.
 
 Select in-portal.
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s---bwMvA0C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AR7td7o0irI7STDwRsCnDDg.png)
