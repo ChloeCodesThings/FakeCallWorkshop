@@ -189,7 +189,7 @@ Click the **Run** button at the top of your function. Your logs should pop up an
 
 Now we'll add our 2nd function to our app- this time, with the code to send a call (vs. a text).
 
-Add another function to your app (as we did before on our 1st function- click the plus sign in the right-hand side navigation), and select **HTTPTrigger** again.
+Add another function to your app (as we did before on our 1st function- click the plus sign in the left-hand side navigation), and select **HTTPTrigger** again.
 
 ### Add Sample Code to our Function
 
