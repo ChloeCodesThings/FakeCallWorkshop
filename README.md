@@ -79,7 +79,7 @@ Once you have a trial number, head back to the dashbaord. You'll see a **ACCOUNT
 
 Navigate back to the Azure portal, and replace the exsiting code wiith the following code in your index.js file:
 
-```
+```javascript
 const accountSid = process.env.TWILIO_SID;
 const authToken = process.env.TWILIO_TOKEN;
 const client = require('twilio')(accountSid, authToken);
@@ -124,7 +124,7 @@ Add a package.json file to your function. You can do this by navigating to the t
 
 Add the following code to your package.json file (adding your desired app name/description/etc):
 
-```
+```json
 {
   "name": "your-app-name",
   "version": "1.0.0",
@@ -151,7 +151,7 @@ Install the Twilio Node helper library using npm. This will install the twilio m
 
 In the console, enter the following:
 
-```
+```bash
 npm install twilio
 ```
 
@@ -195,7 +195,7 @@ Add another function to your app (as we did before on our 1st function- click th
 
 In the Azure portal, replace the exsiting code with the following code in your index.js file:
 
-```
+```javascript
 const accountSid = process.env.TWILIO_SID;
 const authToken = process.env.TWILIO_TOKEN;
 const client = require('twilio')(accountSid, authToken);
@@ -236,7 +236,7 @@ Add a package.json file to your function (as we did before on our 1st function).
 
 Add the following code to your package.json file:
 
-```
+```json
 {
   "name": "your-app-name",
   "version": "1.0.0",
@@ -261,7 +261,7 @@ Once again, we'll install the Twilio Node helper library using npm. This will in
 
 In the console, enter the following:
 
-```
+```bash
 npm install twilio
 ```
 
@@ -291,7 +291,7 @@ We'll now create a TwiML Bin. TwiML Bins allow you to write TwiML that Twilio wi
 
 Add the following to your TwiML bin- **make sure to replace **URL-OF-YOUR-TWILIO-ASSET** with the url of the Twilio Asset you just created!** This will play our MP3 when a call is made to the **RECIPIENT_NUMBER**:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Response>
