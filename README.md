@@ -5,7 +5,7 @@
 
 Today we will build a fake calling app using:
 
-+ ⚡ [Azure Functions](https://azure.microsoft.com/en-us/services/functions/?WT.mc_id=github-workshop-chcondon)
++ ⚡ [Azure Functions](https://azure.microsoft.com/services/functions/?WT.mc_id=academic-0000-chcondon)
 + ☎️ [Twilio](https://www.twilio.com/)
 + 🔘A [Flic button](http://flic.io/shop/flic-1pack?aff=10)
 + 📱Your cellphone 
@@ -17,7 +17,7 @@ If you don't own a Flic Button, [you can purchase one at a discounted rate here]
 
 
 
-Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I recommend [starting here with our documentation](https://docs.microsoft.com/en-us/azure/azure-functions/?WT.mc_id=fakecallworkshop-github-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=fakecallworkshop-github-chcondon), so you have some context on how to use functions within Azure.
+Before we begin, if you're looking for a quick summary and overview on Azure Functions (or found this page early and would like to get a headstart), I recommend [starting here with our documentation](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=academic-0000-chcondon), or taking 4 minutes to read in more detail [how to create your first Azure Function](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function/?WT.mc_id=academic-0000-chcondon), so you have some context on how to use functions within Azure.
 
 You can learn more about the original project [in my blog post](https://dev.to/azure/an-ambivert-s-guide-to-azure-functions-27b8)!
 
@@ -32,7 +32,7 @@ Here's a diagram of what we'll be doing:
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--wGlGfh8K--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1600/1%2AepHpHigBLPGaCK5tuxzn4w.png)
 
 ### Create an Azure Account!
-If you don't already have one, create an Azure account for free [here](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon)!
+If you don't already have one, create an Azure account for free [here](https://azure.microsoft.com/free/?WT.mc_id=academic-0000-chcondon)!
 
 I know what you may be thinking... "but Chloe- I'm a developer... this is much too bright for me!". Don't worry- there's a dark mode option. 😎
 
@@ -41,13 +41,13 @@ I know what you may be thinking... "but Chloe- I'm a developer... this is much t
 If you already have an Azure account, yay! 
 
 ### Create an Azure Function Resource
-For the sake of easy to understand visuals/screenshots for this workshop, we'll be using the [Azure portal](https://azure.microsoft.com/en-us/free/?WT.mc_id=fakecallworkshop-github-chcondon) to create this. You can also use [VS Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=fakecallworkshop-github-chcondon), the [Azure CLI](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli/?WT.mc_id=fakecallworkshop-github-chcondon), etc. With Azure Functions you are given the the ability to code and test Functions locally on your machine without having to deploy to the cloud every single time you want to test (a huge time saver!).
+For the sake of easy to understand visuals/screenshots for this workshop, we'll be using the [Azure portal](https://azure.microsoft.com/free/?WT.mc_id=academic-0000-chcondon) to create this. You can also use [VS Code](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=academic-0000-chcondon), the [Azure CLI](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli/?WT.mc_id=academic-0000-chcondon), etc. With Azure Functions you are given the the ability to code and test Functions locally on your machine without having to deploy to the cloud every single time you want to test (a huge time saver!).
 
 To create an Azure Function, you can just start from the Get Started menu and select Function App.
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--TnBmEJTg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/1200/1%2A0yImy-SW4IsrRgJN_UjP7Q.png)
 
-Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?WT.mc_id=devto-blog-chcondon/?WT.mc_id=fakecallworkshop-github-chcondon) (create a new one in this case), the Operating System you’d like to use (please select **Windows** for this workshop), the [hosting plan](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=fakecallworkshop-github-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US is usually my default), the runtime stack I’d like to use (I’m using NodeJS in this case), and we have the option to create new [storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction/?WT.mc_id=fakecallworkshop-github-chcondon) or use existing. We'll create a new one in this case.
+Then you’ll need to fill in some basic info about your function here. Including the app name, the Azure subscription you’d like to use, a [resource group](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview?WT.mc_id=academic-0000-chcondon) (create a new one in this case), the Operating System you’d like to use (please select **Windows** for this workshop), the [hosting plan](https://docs.microsoft.com/azure/azure-functions/functions-scale/?WT.mc_id=academic-0000-chcondon) (I’m using consumption), the location you’d like to use (I’m based in California, so West US is usually my default), the runtime stack I’d like to use (I’m using NodeJS in this case), and we have the option to create new [storage](https://docs.microsoft.com/azure/storage/common/storage-introduction/?WT.mc_id=academic-0000-chcondon) or use existing. We'll create a new one in this case.
 
 ![](https://i.imgur.com/rEdUcjS.png)
 
@@ -388,20 +388,20 @@ Here's a diagram you can print and hang on your fridge to remember this moment f
 
 If you're interested in learning more about Azure Functions and want to continue learning, here are some great resources to get started:
 
-+ [Create your first function using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=github-workshop-chcondon)
++ [Create your first function using Visual Studio Code](https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-vs-code/?WT.mc_id=academic-0000-chcondon)
 
-+ [Create a function in Azure that is triggered by a timer](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-scheduled-function/?WT.mc_id=github-workshop-chcondon)
++ [Create a function in Azure that is triggered by a timer](https://docs.microsoft.com/azure/azure-functions/functions-create-scheduled-function/?WT.mc_id=academic-0000-chcondon)
 
-+ [Create a function triggered by Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-cosmos-db-triggered-function/?WT.mc_id=github-workshop-chcondon)
++ [Create a function triggered by Azure Cosmos DB](https://docs.microsoft.com/azure/azure-functions/functions-create-cosmos-db-triggered-function/?WT.mc_id=academic-0000-chcondon)
 
-+ [Create a function triggered by Azure Blob storage](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-blob-triggered-function/?WT.mc_id=github-workshop-chcondon)
++ [Create a function triggered by Azure Blob storage](https://docs.microsoft.com/azure/azure-functions/functions-create-storage-blob-triggered-function/?WT.mc_id=academic-0000-chcondon)
 
-+ [Create a function triggered by Azure Queue storage](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-storage-queue-triggered-function/?WT.mc_id=github-workshop-chcondon)
++ [Create a function triggered by Azure Queue storage](https://docs.microsoft.com/azure/azure-functions/functions-create-storage-queue-triggered-function/?WT.mc_id=academic-0000-chcondon)
 
-+ [Azure Functions developer reference](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference/?WT.mc_id=github-workshop-chcondon) (provides more technical information about the Azure Functions runtime and a reference for coding functions and defining triggers and bindings)
++ [Azure Functions developer reference](https://docs.microsoft.com/azure/azure-functions/functions-reference/?WT.mc_id=academic-0000-chcondon) (provides more technical information about the Azure Functions runtime and a reference for coding functions and defining triggers and bindings)
 
-+ [Testing Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-test-a-function/?WT.mc_id=github-workshop-chcondon)
++ [Testing Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-test-a-function/?WT.mc_id=academic-0000-chcondon)
 
-+ [Azure Functions scale and hosting](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale/?WT.mc_id=github-workshop-chcondon)
++ [Azure Functions scale and hosting](https://docs.microsoft.com/azure/azure-functions/functions-scale/?WT.mc_id=academic-0000-chcondon)
 
-+ [Learn more about Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/overview/?WT.mc_id=github-workshop-chcondon)
++ [Learn more about Azure App Service](https://docs.microsoft.com/azure/app-service/overview/?WT.mc_id=academic-0000-chcondon)
